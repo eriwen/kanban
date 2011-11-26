@@ -1,0 +1,20 @@
+form.new-story(method='post', action='/')
+  input(type='hidden', name='card[status]', value='ready')
+  input(type='submit', value='New Card')
+  input(type='text', name='card[summary]')
+  textarea(name='card[content]')
+
+table.board-table
+  thead
+    tr
+      - each cardtype in cardsinfo
+        th(class=cardtype.name) #{cardtype.title}
+  tbody
+    tr
+      - each cardtype in cardsinfo
+        td
+          ul.cards(data-status=cardtype.name)
+            - each card in cardtype.cards
+              li.card(class=card.status, data-id=card._id) 
+                div.card-title(data-rel='summary', contenteditable='true') #{card.summary}
+                div.content(data-rel='content', contenteditable='true') #{card.content}

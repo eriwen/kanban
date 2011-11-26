@@ -1,0 +1,93 @@
+body {
+  font: 20px helvetica, arial, sans-serif;
+  color: #333;
+  margin: 10px auto;
+  max-width: 960px;
+}
+.clear {
+  clear: both;
+}
+.board-table {
+  font-size: 24px;
+  margin: 10px 0;
+  table-layout: fixed;
+  width: 100%;
+}
+.board-table th {
+  font-weight: bold;
+  width: 20%;
+}
+.board-table td,
+.board-table th {
+  border: 1px dashed #999;
+  border-width: 0 1px;
+}
+.cards {
+  margin: 0;
+  min-height: 400px;
+  padding: 10px 5px;
+}
+.card {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  color: #333;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.card-title {
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  text-align: center;
+}
+.blocked {
+  background-color: #f00;
+  border: 2px solid #c00;
+}
+.highlight {
+  background-color: #d0e86c;
+  border: 2px solid #bddf31;
+}
+.ready {
+  background-color: #c378ff;
+  border: 2px solid #a22dff;
+}
+.working {
+  background-color: #ff809e;
+  border: 2px solid #ff3363;
+}
+.review {
+  background-color: #ffae63;
+  border: 2px solid #ff891c;
+}
+.deployed {
+  background-color: #62f0b4;
+  border: 2px solid #24ea97;
+}
+.new-story {
+  background-color: #ddd;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  padding: 7px 5px 7px 8px;
+  margin: 20px 0;
+}
+.new-story input[type=text] {
+  width: 80%;
+  height: 34px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  vertical-align: bottom;
+}
+.new-story textarea {
+  width: 80%;
+  height: 80px;
+  vertical-align: bottom;
+}
+.new-story input[type=submit] {
+  float: right;
+  width: 18%;
+  height: 125px;
+  margin: 3px 5px;
+  font-size: 20px;
+}

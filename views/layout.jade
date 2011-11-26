@@ -1,0 +1,17 @@
+!!! 5
+html
+    head
+        meta(charset='utf-8' )
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        title Simple Kanban
+        link(rel='stylesheet', href='/stylesheets/normalize.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        != body
+        - if (this.development)
+            script(src='/javascripts/jquery-1.7.1.js')
+            script(src='/javascripts/jquery-ui-1.8.16.custom.js')
+        - else
+            script(src='/javascripts/jquery-1.7.1.min.js')
+            script(src='/javascripts/jquery-ui-1.8.16.custom.min.js')
+        script(src='/javascripts/main.js')

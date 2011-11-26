@@ -1,0 +1,106 @@
+// Mixins
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  vendor('box-shadow', arguments)
+
+transition()
+  vendor('transition', arguments)
+
+card_style_for_color($color)
+  background-color $color
+  border: 2px solid darken($color, 20%);
+
+// Variables
+max-width = 960px
+blocked-color = #FF0000
+highlight-color = #D0E86C
+ready-color = #C378FF
+working-color = #FF809E
+review-color = #FFAE63
+deployed-color = #62F0B4
+
+// Board Styles
+body
+  font 20px helvetica, arial, sans-serif
+  color #333
+  margin 10px auto
+  max-width max-width
+
+.clear
+  clear both
+
+.board-table
+  font-size 24px
+  margin 10px 0
+  table-layout fixed
+  width 100%
+  
+  & th
+    font-weight bold
+    width 20%
+  & td, & th
+    border 1px dashed #999
+    border-width 0 1px
+
+// Card styles
+.cards
+  margin 0
+  min-height 400px
+  padding 10px 5px
+
+.card
+  border-radius(7px)
+  color #333
+  list-style none
+  margin-bottom 5px
+
+.card-title
+  border-bottom 1px solid #333
+  font-weight bold
+  text-align center
+
+.blocked
+  card_style_for_color(blocked-color)
+.highlight
+  card_style_for_color(highlight-color)
+.ready
+  card_style_for_color(ready-color)
+.working
+  card_style_for_color(working-color)
+.review
+  card_style_for_color(review-color)
+.deployed
+  card_style_for_color(deployed-color)
+
+// New Card Form
+.new-story
+  background-color #DDD
+  border-radius(7px)
+  padding 7px 5px 7px 8px
+  margin 20px 0
+
+  & input[type=text]
+    width 80%
+    height 34px
+    font-size 20px
+    margin-bottom 5px
+    vertical-align bottom
+  
+  & textarea
+    width 80%
+    height 80px
+    vertical-align bottom
+
+  & input[type=submit]
+    float right
+    width 18%
+    height 125px
+    margin 3px 5px
+    font-size 20px

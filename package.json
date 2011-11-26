@@ -1,0 +1,13 @@
+{
+    "name": "Kanban Board"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.0"
+    , "stylus": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    , "mocha": ">= 0.0.1"
+    , "mongoose": ">= 0.0.1"
+    , "zombie": ">= 0.0.1"
+  }
+}
