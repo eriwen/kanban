@@ -62,25 +62,21 @@ This will get you setup with a skeleton app you can run immediately with:
 
 And then point to `http://localhost:3000` in your favorite browser.
 
-It should look like this:
-
-[picture here]
-
 Source doesn't get written without tests, so let's use the new hotness, Mocha:
 
-   npm install mocha
+    npm install mocha
 
 We'll want to install mongoose, a MongoDB ODM:
 
-   npm install mongoose
+    npm install mongoose
 
 Create a directory where MongoDB can store it's data:
 
-   mkdir -p /data/db
+    mkdir -p /data/db
 
 And start it up:
 
-   mongod --dbpath /data/db &
+    mongod --dbpath /data/db &
 
 Ok, we're ready! Let's write some JavaScript!
 
@@ -88,28 +84,23 @@ Ok, we're ready! Let's write some JavaScript!
 
 Your directory structure will look like this:
 
-├── app.js _Your app server code_
-├── node_modules _Where third-party modules are installed_
-│   ├── express
-│   ├── jade
-│   ├── mocha
-│   ├── mongoose
-│   └── stylus
-├── package.json _App details for installation later_
-├── public _Directory where your client-facing code resides "/"_
-│   ├── images
-│   ├── javascripts _Client-side JS like jQuery goes here_
-│   └── stylesheets _Stylus .styl files_
-├── routes
-│   └── index.js _JS relevant to view routing and mongo handling_
-└── views
-    ├── index.jade _Our main view code_
-    └── layout.jade _Layout used by all other Jade files_
+ - app.js (Your app server code)
+ - node_modules (Where third-party modules are installed)
+ - package.json (App details for installation later)
+ - public (Directory where your client-facing code resides "/")
+   - images
+   - javascripts (Client-side JS like jQuery goes here)
+   - stylesheets (Stylus .styl files here)
+ - routes
+   - index.js (JS relevant to view routing and mongo handling)
+ - views
+   - index.jade (Our main view)
+   - layout.jade (Layout used by all other Jade files)
 
-We want to keep our styles consistent across browsers, so we're going to use
+We want to keep our view generally consistent across browsers, so we're going to use
 normalize.css with stylus style!
 
-Copy the raw source of https://gist.github.com/1391529 to `$project-dir/public/stylesheets/normalize.styl`
+Copy the raw source of https://gist.github.com/1391529 to `public/stylesheets/normalize.styl`
 
 Stylus will automatically retranspile .styl files to CSS when you change them!
 
@@ -183,7 +174,7 @@ Let's tell it to pass a list of card statuses instead of a title:
 We'll need to write the home page to show a simple column-based kanban board.
 
 Create a table with table headers for each step in your process and then just one row with table cells that will contain
-our card lists. Use an `each` construct in Jade. If you get stuck, take a look at the finished project 
+our card lists. Use an `each` construct in Jade. If you get stuck, you can cheat
 at [http://git.io/kanban](http://git.io/kanban) or ask a helper.
 
 ## Step 3: Creating Cards in MongoDB
