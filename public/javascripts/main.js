@@ -1,6 +1,7 @@
 function init() {
   $('.card>.card-title').bind('change', updateText);
   $('.card>.content').bind('change', updateText);
+  $('.card>.card-delete').bind('click', deleteCard);
   $('[contenteditable]').bind('focus', inlineFocus).bind('blur paste', inlineBlur);
   $('[contenteditable]').mousedown(function(){ this.focus(); });
   $('.cards').sortable({
@@ -50,6 +51,19 @@ function updateStatus(evt, ui) {
     dataType: 'json',
     success: function() {
       card.removeClass().addClass(newStatus).addClass('card')
+    }
+  });
+}
+
+function deleteCard(evt) {
+  var card = $(this).parent('.card');
+
+  $.ajax({
+    type: 'DELETE',
+    url: '/' + card.data('id'),
+    dataType: 'json',
+    success: function() {
+      card.detach();
     }
   });
 }

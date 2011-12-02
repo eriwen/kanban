@@ -42,5 +42,10 @@ exports.updateCard = (req, res) ->
       res.send null, 200
 
 exports.deleteCard = (req, res) ->
-  res.redirect "back"
-  # Your homework ;)
+  propagateError = _createErrorResponse(res)
+  Card.findOne
+    _id: req.params.id, (err, card) ->
+      propagateError err
+      card.remove propagateError
+      res.send null, 200
+

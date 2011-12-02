@@ -15,6 +15,7 @@ table.board-table
         td
           ul.cards(data-status=cardtype.name)
             - each card in cardtype.cards
-              li.card(class=card.status, data-id=card._id) 
+              li.card(class=card.status, data-id=card._id)
                 div.card-title(data-rel='summary', contenteditable='true') #{card.summary}
+                div.card-delete [X]
                 div.content(data-rel='content', contenteditable='true') #{card.content}
