@@ -40,16 +40,6 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.card-delete {
-  color: #f00;
-  font-weight: normal;
-  font-size: 14px;
-  float: right;
-  margin-right: 5px;
-}
-.card-delete :hover {
-  text-decoration: underline;
-}
 .blocked {
   background-color: #f00;
   border: 2px solid #c00;
