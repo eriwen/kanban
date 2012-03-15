@@ -1,0 +1,14 @@
+{
+  "formatter": "cli",
+  "ignore": ".coverignore",
+  
+  "prefix": "coveragefile_",
+  "dataDirectory": ".coverage_data",
+  
+  // Formatter-specific info
+  "html" : {
+      "directory": "cover_html",
+      "generateIndex": true
+  },
+  "json": {}
+}

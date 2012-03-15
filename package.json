@@ -1,13 +1,17 @@
 {
-    "name": "Kanban Board"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.5.0"
-    , "stylus": ">= 0.0.1"
-    , "jade": ">= 0.0.1"
-    , "mocha": ">= 0.0.1"
-    , "mongoose": ">= 0.0.1"
-    , "zombie": ">= 0.0.1"
+  "name": "kanban",
+  "version": "0.0.2",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.x",
+    "stylus": "0.x",
+    "jade": "0.x",
+    "mongoose": "2.5.x"
+  },
+  "devDependencies": {
+    "mocha": "0.14.x",
+    "cover": "0.2.x",
+    "zombie": "0.12.x",
+    "coffee-script": "~1.2"
   }
 }

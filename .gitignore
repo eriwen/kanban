@@ -1,3 +1,5 @@
 node_modules
+.coverage_data
+cover_html
 Thumbs.db
 .DS_STORE
